@@ -1,0 +1,66 @@
+Create a program that converts distances between Kilometer and Mile and temperatures between Celsius and Fahrenheit.
+
+Program Requirements
+1. The program should prompt the user to select converting Distance or Temperature.
+2. After choice selected, use a menu to allow the user to choose the conversion direction.
+3. Input the information using 'scanf' and print the results of the conversion using 'printf'.
+4. All your code should be contained in the main() function of your program.
+
+Input Requirements
+1. The temperature or distance input should be a real number.
+2. The distance cannot be less than 0.0 or greater than 20000.1.
+3. The temperature cannot be less than -110.0 or greater than 1000.0.
+
+Output Requirements
+1. The number should be formatted with two decimal points.
+2. The output from the conversion should be easy to understand.
+3. Output should send to standard output (screen).
+
+Sample Output (User Input Is Bold)
+
+Convert Temperatures and Measurements
+1. Distance Conversion
+2. Temperature Conversion
+3. Quit
+Choice: 1
+
+Distance Converter
+1. Kilometers to Miles
+2. Miles to Kilometers
+3. Main Menu
+4. Quit
+Choice: 2
+
+Enter the distance: 50
+50.00 Miles is 80.45 Kilometers
+
+Distance Converter
+1. Kilometers to Miles
+2. Miles to Kilometers
+3. Main Menu
+4. Quit
+Choice: 3
+
+Convert Temperatures and Measurements
+1. Distance Conversion
+2. Temperature Conversion
+3. Quit
+Choice: 2
+
+Temperature Converter
+1. Celsius to Fahrenheit
+2. Fahrenheit to Celsius
+3. Main Menu
+4. Quit
+Choice: 2
+
+Enter temperature in Fahrenheit: 98.6
+98.60 Fahrenheit is 37.00 Celsius
+Additional Instructions
+- Allow the user to continue converting temperatures until they choose to quit.
+- Implement error handling for invalid inputs.
+- Include comments to explain the purpose of each part of your code.
+- Test the program with various temperature values and units.
+
+This assignment provides an opportunity for you to practice input/output operations, conditional statements, and loops while working on a practical problem. 
+Remember to use good coding practices. Submit your program as a file named assignment3.c by 11:59:59 on the due date.

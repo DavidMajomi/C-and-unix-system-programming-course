@@ -1,0 +1,53 @@
+Create a program that converts distances between Kilometer and Mile and temperatures between Celsius and Fahrenheit.
+
+Program Requirements
+1. The program should prompt the user to select converting Distance or Temperature.
+2. After choice selected, use a menu to allow the user to choose the conversion direction.
+3. Input the information using 'scanf' and print the results of the conversion using 'printf'.
+4. All your code should be contained in the main() function of your program.
+
+Input Requirements
+1. The temperature or distance input should be a real number.
+2. The distance cannot be less than 0.0 or greater than 20000.1.
+3. The temperature cannot be less than -110.0 or greater than 1000.0.
+
+Output Requirements
+1. The number should be formatted with two decimal points.
+2. The output from the conversion should be easy to understand.
+3. Output should send to standard output (screen).
+
+
+- Allow the user to continue converting temperatures until they choose to quit.
+- Implement error handling for invalid inputs.
+- Include comments to explain the purpose of each part of your code.
+- Test the program with various temperature values and units.
+
+
+###################################  General Observations  ###################################
+All code must be in the main function meaning no using external functions.
+Using nested while loops for the menu inside menu structure one while loop for each menu.
+
+Input validation requirements => Use while loop for input validation.
+    =>  use scanf to get string
+        Loop through all values in string array and test each to ensure all values are integers
+        if all values = int, then convert and check if within appropriate range, then change while loop state to valid to exit loop.
+        if not all values int or int value exceeds range, then not valid rerun block using while loop.
+
+Although other functions are not allowed, duplicate code must be written like inline functions to ensure easier conversion to a standard function and avoid challenges of code duplication.
+
+General Flow Control idea
+1.) While not quit Display main menu
+2.) Wait for user string input
+3.) reprompt if invalid, else move foward
+4.) Enter the selected menu user requested using if statements
+6.) while within selected menu
+    a.) Wait for user string input
+    b.) Reprompt if invalid, else move foward
+    c.) Enter seleted menu using if statements.
+    d.) While within selected menu
+        I.) Wait for user string input
+        II.) Reprompt if invalid, else move foward
+        III.) Perform Conversion
+        IV.) Display converted value in required format.
+        V.) Change while loop condition to move to the outer while loop / menu.
+    e.) Rerun this while loop / menu (do nothing loop will rerun automatically since input != main menu option)
