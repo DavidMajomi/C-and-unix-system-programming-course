@@ -3,11 +3,11 @@
 
 int main()
 {
-    const int distanceConversionOption = 1, temperatureConversionOption = 2, quitOption = 3,
+    const unsigned short int distanceConversionOption = 1, temperatureConversionOption = 2, quitOption = 3,
         kilometerToMilesOption = 1, milesToKilometerOption = 2, mainMenuOption = 3,
         celsiusToFahrenheitOption = 1, fahrenheitToCelsiusOption = 2, nestedMainMenuOption = 3,
-        nestedMenuQuitOption = 4;
-    int  mainMenuUserInput = 0, userInput = 0;
+        nestedMenuQuitOption = 4, minimumDistance = 0, maximumDistance = 20000;
+    const int  mainMenuUserInput = 0, userInput = 0, minimumTemperature = -110, maximumTemperature = 1000;
 
 
     bool quit = false;
@@ -29,6 +29,7 @@ int main()
             bool displayDistanceConversion = true;
             while (displayDistanceConversion == true)
             {
+                bool validInputs = false;
                 double distanceToConvert = 0, convertedKmToMiles = 0, convertedMilesToKm = 0;      // where Km => kilometers
                 printf("\n");
                 printf("Distance Converter \n");
@@ -49,22 +50,53 @@ int main()
                 {
                     if (userInput == 1)
                     {
-                        printf("Enter the distance in Kilometers: ");
-                        scanf("%lf",&distanceToConvert);
-                        
-                        convertedKmToMiles = (0.62137119 * distanceToConvert);
+                        validInputs = false;
+                        while (validInputs == false)
+                        {
 
-                        printf("%-.2f %s %-.2f %s", distanceToConvert, " Kilometers is ", convertedKmToMiles, " Miles \n");
+                            printf("Enter the distance in Kilometers: ");
+                            scanf("%lf",&distanceToConvert);
+                            
+                            if((distanceToConvert >= minimumDistance) && (distanceToConvert <= maximumDistance))
+                            {
+                                validInputs = true;
+
+                                convertedKmToMiles = (0.62137119 * distanceToConvert);
+
+                                printf("%-.2f %s %-.2f %s", distanceToConvert, " Kilometers is ", convertedKmToMiles, " Miles \n");
+                        
+                            }
+                            else
+                            {
+                                printf("\n");
+                                printf(" Invalid Inputs try again. \n");
+                            }
+
+                        }
 
                     }
                     else if(userInput == 2)
                     {
-                        printf("Enter the distance in Miles: ");
-                        scanf("%lf",&distanceToConvert);
+                        validInputs = false;
+                        while (validInputs == false)
+                        {
+                            printf("Enter the distance in Miles: ");
+                            scanf("%lf",&distanceToConvert);
+                            
+                            if((distanceToConvert >= minimumDistance) && (distanceToConvert <= maximumDistance))
+                            {
+                                validInputs = true;
 
-                        convertedMilesToKm = (distanceToConvert / 0.62137119);
+                                convertedMilesToKm = (distanceToConvert / 0.62137119);
 
-                        printf("%-.2f %s %-.2f %s", distanceToConvert, " Miles is ", convertedMilesToKm, " Kilometers \n");
+                                printf("%-.2f %s %-.2f %s", distanceToConvert, " Miles is ", convertedMilesToKm, " Kilometers \n");
+                            }
+                            else
+                            {
+                                printf("\n");
+                                printf(" Invalid Inputs try again. \n");
+                            }
+                        }
                     }
                     else
                     {
@@ -104,21 +136,51 @@ int main()
                 {
                     if (userInput == 1)
                     {
-                        printf("Enter temperature in Celsius: ");
-                        scanf("%lf",&temperatureToConvert);
+                        validInputs = false;
+                        while (validInputs == false)
+                        {
+                            printf("Enter temperature in Celsius: ");
+                            scanf("%lf",&temperatureToConvert);
+                            
+                            if((temperatureToConvert >= minimumTemperature) && (temperatureToConvert <= maximumTemperature))
+                            {
+                                validInputs = true;
 
-                        convertedCelsiusToFahrenheitValue = (temperatureToConvert * 1.8) + 32;
+                                convertedCelsiusToFahrenheitValue = (temperatureToConvert * 1.8) + 32;
 
-                        printf("%-.2f %s %-.2f %s", temperatureToConvert, " Celsius is ", convertedCelsiusToFahrenheitValue, " Fahrenheit \n");
-
+                                printf("%-.2f %s %-.2f %s", temperatureToConvert, " Celsius is ", convertedCelsiusToFahrenheitValue, " Fahrenheit \n");
+                        
+                            }
+                            else
+                            {
+                                printf("\n");
+                                printf(" Invalid Inputs try again. \n");
+                            }
+                        }
                     }
                     else if(userInput == 2)
                     {
-                        printf("Enter temperature in Fahrenheit: ");
-                        scanf("%lf",&temperatureToConvert);
+                        validInputs = false;
+                        while (validInputs == false)
+                        {
+                            printf("Enter temperature in Celsius: ");
+                            scanf("%lf",&temperatureToConvert);
+                            
+                            if((temperatureToConvert >= minimumTemperature) && (temperatureToConvert <= maximumTemperature))
+                            {
+                                validInputs = true;
 
-                        convertedFahrenheitToCelsiusValue = (temperatureToConvert - 32) * (double)5 / 9;
-                        printf("%-.2f %s %-.2f %s", temperatureToConvert, " Fahrenheit is ", convertedFahrenheitToCelsiusValue, " Celsius \n");
+                                convertedFahrenheitToCelsiusValue = (temperatureToConvert - 32) * (double)5 / 9;
+
+                                printf("%-.2f %s %-.2f %s", temperatureToConvert, " Fahrenheit is ", convertedFahrenheitToCelsiusValue, " Celsius \n");
+                            }
+                            else
+                            {
+                                printf("\n");
+                                printf(" Invalid Inputs try again. \n");
+                            }
+                        }
+                        
                     }
                     else
                     {
@@ -126,17 +188,14 @@ int main()
                     }
                 }
 
-
             }
             
         }
-
 
         if((mainMenuUserInput == quitOption) || (userInput == nestedMenuQuitOption))
         {
             quit = true;
         }
-        
     }
 
     
