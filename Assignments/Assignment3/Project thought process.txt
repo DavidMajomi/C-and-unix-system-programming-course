@@ -51,3 +51,14 @@ General Flow Control idea
         IV.) Display converted value in required format.
         V.) Change while loop condition to move to the outer while loop / menu.
     e.) Rerun this while loop / menu (do nothing loop will rerun automatically since input != main menu option)
+
+
+
+Tessting Recommendations:
+1.) Check greater than and less than temperature = -110 / temperature = 1000 for clesius and fahrenheit.
+2.) Check greater than and less than for distance = 0 / distnace = 1000
+3.) Test values of float for menu selection.
+4.) Test nested quit an d main menu options.
+5.) Please kindly include comments especially around nested while loops used for validation.
+6.) Ensure after every converion the converssion menu is re - displayed.
+
