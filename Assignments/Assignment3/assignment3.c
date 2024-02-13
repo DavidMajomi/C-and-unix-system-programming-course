@@ -164,7 +164,7 @@ int main()
                         validInputs = false;
                         while (validInputs == false)        // While loop to re-display menu if input = invalid
                         {
-                            printf("Enter temperature in Celsius: ");
+                            printf("Enter temperature in Fahrenheit: ");
                             scanf("%lf",&temperatureToConvert);
                             
                             if((temperatureToConvert >= minimumTemperature) && (temperatureToConvert <= maximumTemperature))
