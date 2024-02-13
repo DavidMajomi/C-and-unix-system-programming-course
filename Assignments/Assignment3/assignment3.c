@@ -7,7 +7,8 @@ int main()
         kilometerToMilesOption = 1, milesToKilometerOption = 2, mainMenuOption = 3,
         celsiusToFahrenheitOption = 1, fahrenheitToCelsiusOption = 2, nestedMainMenuOption = 3,
         nestedMenuQuitOption = 4, minimumDistance = 0, maximumDistance = 20000;
-    const int  mainMenuUserInput = 0, userInput = 0, minimumTemperature = -110, maximumTemperature = 1000;
+    const int  mainMenuUserInput = 0, minimumTemperature = -110, maximumTemperature = 1000;
+    int userInput = 0;
 
 
     bool quit = false;
@@ -27,13 +28,13 @@ int main()
         if(mainMenuUserInput == distanceConversionOption)
         {
             bool displayDistanceConversion = true;
-            while (displayDistanceConversion == true)
+            while (displayDistanceConversion == true)       // While loop to re-display menu if input = invalid
             {
                 bool validInputs = false;
                 double distanceToConvert = 0, convertedKmToMiles = 0, convertedMilesToKm = 0;      // where Km => kilometers
                 printf("\n");
                 printf("Distance Converter \n");
-                printf("1 Kilometers to Miles \n");
+                printf("1. Kilometers to Miles \n");
                 printf("2. Miles to kilometers \n");
                 printf("3. Main Menu \n");
                 printf("4. QUit \n");
@@ -51,7 +52,7 @@ int main()
                     if (userInput == 1)
                     {
                         validInputs = false;
-                        while (validInputs == false)
+                        while (validInputs == false)        // While loop to re-display menu if input = invalid
                         {
 
                             printf("Enter the distance in Kilometers: ");
@@ -78,7 +79,7 @@ int main()
                     else if(userInput == 2)
                     {
                         validInputs = false;
-                        while (validInputs == false)
+                        while (validInputs == false)        // While loop to re-display menu if input = invalid
                         {
                             printf("Enter the distance in Miles: ");
                             scanf("%lf",&distanceToConvert);
@@ -110,7 +111,7 @@ int main()
         else if(mainMenuUserInput == temperatureConversionOption)
         {
             bool displayTemperatureConversion = true;
-            while (displayTemperatureConversion == true)
+            while (displayTemperatureConversion == true)        // While loop to re-display menu if input = invalid
             {
                 bool validInputs = false;
                 double temperatureToConvert = 0, convertedCelsiusToFahrenheitValue = 0, convertedFahrenheitToCelsiusValue = 0;
@@ -137,7 +138,7 @@ int main()
                     if (userInput == 1)
                     {
                         validInputs = false;
-                        while (validInputs == false)
+                        while (validInputs == false)        // While loop to re-display menu if input = invalid
                         {
                             printf("Enter temperature in Celsius: ");
                             scanf("%lf",&temperatureToConvert);
@@ -161,7 +162,7 @@ int main()
                     else if(userInput == 2)
                     {
                         validInputs = false;
-                        while (validInputs == false)
+                        while (validInputs == false)        // While loop to re-display menu if input = invalid
                         {
                             printf("Enter temperature in Celsius: ");
                             scanf("%lf",&temperatureToConvert);
