@@ -55,10 +55,11 @@ General Flow Control idea
 
 
 Tessting Recommendations:
-1.) Check greater than and less than temperature = -110 / temperature = 1000 for clesius and fahrenheit.
-2.) Check greater than and less than for distance = 0 / distnace = 1000
-3.) Test values of float for menu selection.
-4.) Test nested quit an d main menu options.
-5.) Please kindly include comments especially around nested while loops used for validation.
-6.) Ensure after every converion the converssion menu is re - displayed.
+1.) Check greater than and less than temperature = -110 / temperature = 1000 for clesius and fahrenheit.        Passed
+2.) Check greater than and less than for distance = 0 / distance = 20000        Passed
+3.) Test values of float for menu selection.        Failed but not required to fix it.
+4.) Test nested quit and main menu options.         Passed
+5.) Please kindly include comments especially around nested while loops used for validation.        Done
+6.) Ensure after every converion, the conversion menu is re - displayed.        Passed
 
+All tests have to be manual since requirements do not allow for a more friendly testing environment.
