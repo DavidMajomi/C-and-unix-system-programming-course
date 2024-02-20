@@ -1,0 +1,111 @@
+hello: hello.c
+	gcc -o hello hello.c -I.
+
+.PHONY: clean
+
+clean:
+	rm -f hello
+
+----
+
+hellos: hellomain.c
+	gcc -o hellos hellomain.c hellomyprint.c -I.
+
+.PHONY: clean
+
+clean:
+	rm -f hellos
+
+----
+
+CC=gcc
+CFLAGS=-I.
+
+hellos: hellomain.o hellomyprint.o
+	$(CC) -o hellos hellomain.o hellomyprint.o $(CFLAGS)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o hellos
+
+----
+
+CC=gcc
+CFLAGS=-I.
+
+hellos: hellomain.o hellomyprint.o
+	$(CC) -o hellos hellomain.o hellomyprint.o $(CFLAGS)
+
+hellomain.o: helloheader.h hellomain.c
+	$(CC) -c hellomain.c $(CFLAGS)
+
+hellomyprint.o : hellomyprint.c
+	$(CC) -c hellomyprint.c
+
+.PHONY: clean
+
+clean:
+	rm -f *.o hellos
+
+----
+
+CC=gcc
+CFLAGS=-I.
+OBJECTS = hello.o hellofunc.o
+
+hellos: $(OBJECTS)
+	$(CC) -o hellos $(OBJECTS) $(CFLAGS)
+
+hellomain.o: helloheader.h hellomain.c
+	$(CC) -c hellomain.c $(CFLAGS)
+
+hellomyprint.o : hellomyprint.c
+	$(CC) -c hellomyprint.c
+
+.PHONY: clean
+
+clean:
+	rm -f hellos $(OBJECTS)
+
+----
+
+CC=gcc
+CFLAGS=-I.
+LIB = -lm
+OBJECTS = hellomain.o hellomyprint.o
+PROGRAM = hellos
+
+$(PROGRAM): $(OBJECTS)
+	$(CC) -o $(PROGRAM) $(OBJECTS) $(CFLAGS)
+
+hellomain.o: helloheader.h hellomain.c
+	$(CC) -c hellomain.c $(CFLAGS)
+
+hellomyprint.o : hellomyprint.c
+	$(CC) -c hellomyprint.c
+
+.PHONY: clean
+
+clean:
+	rm -f $(PROGRAM) $(OBJECTS)
+
+----
+
+CC=gcc
+CFLAGS=-I.
+DEPS = helloheader.h
+OBJ = hellomain.o hellomyprint.o
+PROG = hellos
+
+$(PROG): $(OBJ)
+        $(CC) -o $(PROG) $(OBJ) $(CFLAGS)
+
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+.PHONY: clean
+
+clean:
+	rm -f *.o $(PROG)
