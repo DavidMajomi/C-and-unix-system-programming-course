@@ -1,0 +1,77 @@
+This is assignment expands on your previous assignment.  We are going to use what you worked on in your last assignment and first break it apart into functions and then expand the capability of the function so that we can make it a reusable function.  Your program will now convert distances between Kilometer, Mile, Feet, and Meter and temperatures between Celsius, Fahrenheit and Kelvin.
+
+Program Requirements
+1. The program should prompt the user to select converting Distance or Temperature from within the main() function.
+2. After choice selected, use a menu to allow the user to choose the conversion direction within the main() function.
+3. Input the information using 'scanf' and print the results of the conversion using 'printf'.
+4. You must have atleast two functions named convertDistances() and convertTemperature(), other than the main() function. 
+5. The convert function(s) will have three parameters:
+     a. measurement converting "from"
+     b. measurement converting "to"
+     c. measurement "input"
+
+Input Requirements
+1. The input should be a real number.
+2. The distance cannot be less than 0.0 or greater than 20000.1.
+3. The distance labels for from and to can only be km, mi, ft, m.
+4. The temperature cannot be less than -110.0 or greater than 1000.0.
+5. The temperature labels for from and to can only be C, F, K.
+
+Output Requirements
+1. The number should be formatted with four decimal points.
+2. The output from the conversion should be easy to understand.
+3. Output should send to standard output (screen).
+
+
+
+Example Run
+
+Convert Distances or Temperatures
+1. Distance
+2. Temperature
+3. Exit
+Choice: 1
+
+Enter the distance from 0.0 to 20000.1: 2222
+Enter unit to convert from (km, mi, ft, m): ft
+Enter unit to convert to (km, mi, ft, m): m
+
+2222.0000 ft converts to 677.2656 m
+
+Convert Distances or Temperatures
+1. Distance
+2. Temperature
+3. Exit
+Choice: 2
+
+Enter the temperature from -110.0 to 1000.0: 44
+Enter unit to convert from (C, F, K): F
+Enter unit to convert to (C, F, K): F
+
+44.0000 F converts to 44.0000 F
+
+Convert Distances or Temperatures
+1. Distance
+2. Temperature
+3. Exit
+Choice: 2
+
+Enter the temperature from -110.0 to 1000.0: 44
+Enter unit to convert from (C, F, K): F
+Enter unit to convert to (C, F, K): K
+
+44.0000 F = 279.8167 K
+
+Convert Distances or Temperatures
+1. Distance
+2. Temperature
+3. Exit
+Choice: 3
+Additional Instructions
+- Allow the user to continue converting input until they choose to quit.
+- Implement error handling for all invalid inputs on menu, value and unit.
+- Invalid input should be followed with descriptive messages of expected input parameters.
+- Include comments to explain the purpose of each part of your code.
+- Test the program with various valid and invalid values and units.
+
+This assignment provides an opportunity for you to practice input/output operations, conditional statements, loops, function implementation, and function structure demonstrated in class while working on a practical problem. Remember to use good coding practices. Submit your program as a file named asssignment4.c by 11:59:59 on the due date.
