@@ -24,10 +24,10 @@ The main design lens is seeing it as an upgrade to the assignment3 program, henc
 - Contains main while loop to re - display until exist.
 
 ## Other Functions
-###- temperatureConversion()
-###- distanceConversion()
-###- validateValue()
-###- validateUnitInput()
+### - temperatureConversion()
+### - distanceConversion()
+### - validateValue()
+### - validateUnitInput()
 
 # Things to watch out for
 - Ensure the valid input range is still the same
