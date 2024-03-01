@@ -7,7 +7,7 @@ int main()
         kilometerToMilesOption = 1, milesToKilometerOption = 2, mainMenuOption = 3,
         celsiusToFahrenheitOption = 1, fahrenheitToCelsiusOption = 2, nestedMainMenuOption = 3,
         nestedMenuQuitOption = 4, minimumDistance = 0, maximumDistance = 20000;
-    const int  mainMenuUserInput = 0, minimumTemperature = -110, maximumTemperature = 1000;
+    int  mainMenuUserInput = 0, minimumTemperature = -110, maximumTemperature = 1000;
     int userInput = 0;
 
 
