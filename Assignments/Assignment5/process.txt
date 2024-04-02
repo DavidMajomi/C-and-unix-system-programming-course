@@ -1,0 +1,26 @@
+Input file
+Proces delimited data to respective fields
+
+Compute the necesary information like
+    Students semester percentage grade
+    semester Letter Grade
+    average assignment grade
+    average midterm grade
+    average final grade
+
+Output stdout
+    number of students
+    Number of each grade
+
+Output file(final.txt)
+    Name
+
+    semester percentage grade
+    semester Letter Grade
+
+    average assignment grade
+    average midterm grade
+    average final grade
+    
+    Toatal Number of each letter grade
+

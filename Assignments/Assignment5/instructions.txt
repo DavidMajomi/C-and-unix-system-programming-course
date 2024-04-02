@@ -1,0 +1,66 @@
+This program reads student data from a text file named "students.csv", calculates their final semester grades, and generates a report in another text file named "final.txt". The program also prints the report to the console.
+
+Program Requirements
+1. A text file named "students.csv" with the following format: Name, Assignment Grade, Midterm Grade, and Final Grade
+2. Contents of the file should be read and loaded into a structure.
+3. Calculate each student's semester percentage grade and letter grade.
+4. Percentage formula : 40% Assignment Grade, 30% Midterm Grade, 30% Final Grade
+5. Semester Letter Grade :  A 100-90, B+ 89-85, B 84-80, C+ 79-75, C 74-70, D 69-60, F 59-0
+6. Calculate the average assignments grade, the average midterm grade and the average final grade for the entire list of students.
+
+Input File
+1. A text file named "students.csv"
+2. Format: Name, Assignment Grade, Midterm Grade, and Final Grade
+3. Use the following data as your list of students.csv file.
+
+Jesse,96.18,78.25,89.24
+Espn,91.37,93.45,90.67
+Bobbie,53.79,67.83,74.96
+Javier,82.74,93.44,72.76
+Hugh,47.29,58.84,92.54
+Standard Output
+1. Total Number of Students
+2. Totals number of each letter grade : A, B+, B, C+, C, D, F
+
+Total Students: 5
+
+Number of A's: 1
+Number of B+'s: 1
+Number of B's: 1
+Number of C+'s: 0
+Number of C's: 0
+Number of D's: 2
+Number of F's: 0
+Output File
+1. A text file "final.txt"
+2. Name Semester Percentage Grade Semester Letter Grade
+3. Total Number of Students
+4. Average Assignments Grade, Average Midterm Grade, Average Final Grade
+5. Totals number of each letter grade : A, B+, B, C+, C, D, F
+
+Jesse 88.72 B+
+Espn 91.78 A
+Bobbie 64.35 D
+Javier 82.96 B
+Hugh 64.33 D
+
+Total Students: 5
+
+Average Assignments Grade: 74.27
+Average Midterm Exam Grade: 78.36
+Average Final Exam Grade: 84.03
+
+Number of A's: 1
+Number of B+'s: 1
+Number of B's: 1
+Number of C+'s: 0
+Number of C's: 0
+Number of D's: 2
+Number of F's: 0
+Additional Instructions
+- Invalid input should be followed with descriptive messages of expected input parameters.
+- Include comments to explain the purpose of each part of your code.
+- Test the program with various valid and invalid values and units.
+
+This assignment provides an opportunity for you to practice structures, arrays, pointers, file input and output, functions and function structure demonstrated in class while working on a practical problem. Remember to use good coding practices. Submit your program as a file named assignment5.c by 11:59:59 on the due date.
+
